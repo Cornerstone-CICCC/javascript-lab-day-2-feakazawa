@@ -2,4 +2,16 @@
 // and returns the number of consonants in the string.
 // Example: countConsonants("hello world") should return 7.
 
+function countConsonants(word) {
+  const vowelsAndSpace = ["a", "e", "i", "o", "u", " "];
+  const consonants = [];
+
+  for (const char of word) {
+    if (!vowelsAndSpace.includes(char)) {
+      consonants.push(char);
+    }
+  }
+  return consonants.length;
+}
+
 console.log(countConsonants("hello world")); // Expected output: 7
