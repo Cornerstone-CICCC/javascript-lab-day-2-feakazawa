@@ -2,4 +2,16 @@
 // containing the elements that are in the first array but not in the second array.
 // Example: arrayDifference([1, 2, 3], [2, 3, 4]) should return [1].
 
+function arrayDifference(arr1, arr2) {
+  const allNumbers = [...arr1, ...arr2];
+  let result = [];
+
+  allNumbers.forEach((num) => {
+    if (arr1.includes(num) && !arr2.includes(num)) {
+      result.push(num);
+    }
+  });
+  return result;
+}
+
 console.log(arrayDifference([1, 2, 3], [2, 3, 4])); // Expected output: [1]
